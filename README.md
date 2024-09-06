@@ -1,3 +1,6 @@
 Fortnite Offsets Always Updated
 
-Latest Update: v31.00 (16/08/2024)
+Latest Update: v31.10
+
+- New va_text
+- Updated Offsets
