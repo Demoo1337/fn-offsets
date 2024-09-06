@@ -1,6 +1,8 @@
 enum OFFSETS {
 
     UWORLD = 0x11FD3D78, //updated v31.10
+    OwningWorld = 0xc0,
+    persistent_level = 0x30,
     game_instance = 0x1D8,//updated
     game_state = 0x160,//updated
     local_player = 0x38,//updated
