@@ -1,5 +1,9 @@
-			for (int i = 0; i < 25; i++)
-				if (driver.read<__int32>(driver.base_address + (i * 0x1000) + 0x250) == 0x6F41C00)
-				{
-					va_text = driver.base_address + ((i + 1) * 0x1000);
-				}
+		__int64 va_text = 0;
+	for (auto i = 0; i < FLT_MAX; i++) {
+		va_text = virtualaddy + i * 0x1000;
+		auto uworld = read<uintptr_t>(va_text + offsets::uworld);
+		auto level = read<uintptr_t>(uworld + offsets::PersistentLevel);
+		if (uworld && level && read<uintptr_t>(level + offsets::OwningWorld) == uworld) {
+			break;
+		}
+	}
